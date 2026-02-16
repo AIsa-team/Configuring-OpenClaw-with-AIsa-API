@@ -6,7 +6,7 @@ Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenC
 
 - **Cost-effective** - Unified billing, no need for multiple API subscriptions
 - **Faster response** - Smart routing, auto-selects optimal nodes
-- **One-click switch** - 48 top models available anytime, no reconfiguration needed
+- **One-click switch** - 50+ top models available anytime, no reconfiguration needed
 
 ## Getting Started
 
