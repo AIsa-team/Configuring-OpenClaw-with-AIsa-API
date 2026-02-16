@@ -1,6 +1,6 @@
 # Configure OpenClaw with AISA's Unified API
 
-Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw). One API key gives you access to **48 models** across 7 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba).
+Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw). One API key gives you access to **50+ models** across 7 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba).
 
 ## Why AISA?
 
@@ -38,7 +38,7 @@ use https://raw.githubusercontent.com/AIsa-team/Configuring-OpenClaw-with-AIsa-A
 ```
 
 Then just:
-1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$1 free credit**)
+1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$5 free credit**)
 2. Press Enter through the prompts to accept defaults
 
 OpenClaw's AI assistant will read the guide and walk you through replacing your current model provider with AISA.
