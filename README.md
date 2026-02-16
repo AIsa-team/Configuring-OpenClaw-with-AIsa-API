@@ -1,6 +1,6 @@
 # Configure OpenClaw with AISA's Unified API
 
-Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw). One API key gives you access to **50+ models** across 8 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba, ByteDance).
+Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw/openclaw). One API key gives you access to **50+ models** across 8 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba, ByteDance).
 
 ## Why AISA?
 
@@ -11,6 +11,12 @@ Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenC
 ## Getting Started
 
 ### Option 1: Fresh Install (No existing models)
+
+> Please install OpenClaw by running the following command first and skip the model selection:
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
 
 Run this single command to set everything up automatically:
 
