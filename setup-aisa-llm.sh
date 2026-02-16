@@ -186,8 +186,8 @@ t() {
         welcome_desc)        echo "This script configures OpenClaw to use the AISA Unified Model API" ;;
         welcome_feature1)    echo "💰 Cost-effective: Unified billing, no multiple API subscriptions" ;;
         welcome_feature2)    echo "⚡ Faster response: Smart routing, auto-selects optimal nodes" ;;
-        welcome_feature3)    echo "🔄 One-click switch: 48 top models available anytime" ;;
-        overview_title)      echo "📦 Model Overview — 7 Providers, 48 Models" ;;
+        welcome_feature3)    echo "🔄 One-click switch: 53 top models available anytime" ;;
+        overview_title)      echo "📦 Model Overview — 8 Providers, 53 Models" ;;
         overview_provider)   echo "Provider" ;;
         overview_count)      echo " # " ;;
         overview_featured)   echo "Featured Models" ;;
@@ -219,7 +219,7 @@ t() {
         success_title)       echo "🎉🎊 Congratulations! AISA Unified Model Configuration Complete! 🎊🎉" ;;
         success_done)        echo "⚙️  Configuration done, Gateway is ready ✅" ;;
         success_why)         echo "🌟 Why Choose AISA Model Router?" ;;
-        models_title)        echo "📦 48 Models Configured (7 Providers)" ;;
+        models_title)        echo "📦 53 Models Configured (8 Providers)" ;;
         rec_title)           echo "📋 Recommended Models Quick Reference" ;;
         notes_title)         echo "⚠️  Important Notes" ;;
         notes_current)       echo "📌 About Your Configuration:" ;;
