@@ -19,7 +19,7 @@ curl -fsSL https://raw.githubusercontent.com/AIsa-team/Configuring-OpenClaw-with
 ```
 
 Then just:
-1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$1 free credit**)
+1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$5 free credit**)
 2. Press Enter through the prompts to accept defaults
 
 That's it! Your OpenClaw is now configured with AISA LLM.
