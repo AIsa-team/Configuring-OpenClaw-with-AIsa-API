@@ -104,8 +104,8 @@ t() {
         welcome_desc)        echo "本脚本将帮助您快速配置 OpenClaw 使用 AISA 统一模型 API" ;;
         welcome_feature1)    echo "💰 统一计费，无需多个 API 订阅" ;;
         welcome_feature2)    echo "⚡ 智能路由，自动选择最优节点" ;;
-        welcome_feature3)    echo "🔄 48 个顶级模型一键切换" ;;
-        overview_title)      echo "📦 模型总览 — 7 大厂商，48 个模型" ;;
+        welcome_feature3)    echo "🔄 50+ 个顶级模型一键切换" ;;
+        overview_title)      echo "📦 模型总览 — 8 大厂商，50+ 个模型" ;;
         overview_provider)   echo "厂商" ;;
         overview_count)      echo "数量" ;;
         overview_featured)   echo "代表模型" ;;
@@ -121,7 +121,7 @@ t() {
         ask_key_title)       echo "🔑 请输入您的 AISA API Key" ;;
         ask_key_hint)        echo "格式: sk-xxxx" ;;
         ask_key_get)         echo "📝 还没有？请访问获取:" ;;
-        ask_key_free)        echo "🎁 新用户可获得 \$1 免费额度！" ;;
+        ask_key_free)        echo "🎁 新用户可获得 \$5 免费额度！" ;;
         ask_key_prompt)      echo "请粘贴您的 API Key: " ;;
         key_invalid)         echo "❌ API Key 格式无效，应以 sk- 开头" ;;
         key_accepted)        echo "✅ API Key 已接收！" ;;
@@ -137,7 +137,7 @@ t() {
         success_title)       echo "🎉🎊 恭喜！AISA 统一模型配置成功！🎊🎉" ;;
         success_done)        echo "⚙️  配置已完成，Gateway 已就绪 ✅" ;;
         success_why)         echo "🌟 为什么选择 AISA 模型路由？" ;;
-        models_title)        echo "📦 已配置 48 个模型（7 大厂商）" ;;
+        models_title)        echo "📦 已配置 50+ 个模型（8 大厂商）" ;;
         rec_title)           echo "📋 推荐模型速查" ;;
         notes_title)         echo "⚠️  重要提示" ;;
         notes_current)       echo "📌 关于当前配置：" ;;
@@ -157,7 +157,7 @@ t() {
         th_desc)             echo "说明" ;;
         # Vendor names
         vendor_openai)       echo "🟢 OpenAI 系列 (10 个)" ;;
-        vendor_claude)       echo "🟣 Anthropic Claude 系列 (10 个)" ;;
+        vendor_claude)       echo "🟣 Anthropic Claude 系列 (11 个)" ;;
         vendor_gemini)       echo "🔵 Google Gemini 系列 (5 个)" ;;
         vendor_deepseek)     echo "🟠 DeepSeek 系列 (4 个)" ;;
         vendor_grok)         echo "⚫ xAI Grok 系列 (2 个)" ;;
@@ -203,7 +203,7 @@ t() {
         ask_key_title)       echo "🔑 Enter your AISA API Key" ;;
         ask_key_hint)        echo "Format: sk-xxxx" ;;
         ask_key_get)         echo "📝 Don't have one? Get it here:" ;;
-        ask_key_free)        echo "🎁 New users receive \$1 free credit!" ;;
+        ask_key_free)        echo "🎁 New users receive \$5 free credit!" ;;
         ask_key_prompt)      echo "Paste your API Key: " ;;
         key_invalid)         echo "❌ Invalid API Key format, should start with sk-" ;;
         key_accepted)        echo "✅ API Key accepted!" ;;
@@ -277,7 +277,7 @@ print_separator() {
   echo -e "${DIM}$(t separator)${NC}"
 }
 
-# Print model overview table (7 providers, 48 models, 3 featured each)
+# Print model overview table (8 providers, 53 models, 3 featured each)
 print_model_overview() {
   local more="$(t overview_more)"
   echo ""
