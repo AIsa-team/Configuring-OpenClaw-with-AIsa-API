@@ -444,7 +444,7 @@ echo -e "$(t writing_config)"
 
 # Preserve existing non-model config if present
 # Read existing gateway config
-if [[ -f "$BACKUP_FILE" ]]; then
+if [[ -n "${BACKUP_FILE:-}" && -f "$BACKUP_FILE" ]]; then
   GW_PORT=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('port',18789))" 2>/dev/null || echo "18789")
   GW_TOKEN=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('auth',{}).get('token',''))" 2>/dev/null || echo "")
   GW_BIND=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('bind','loopback'))" 2>/dev/null || echo "loopback")
