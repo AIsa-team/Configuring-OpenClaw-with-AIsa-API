@@ -35,12 +35,12 @@ AISA_BASE_URL="https://api.aisa.one/v1"
 AISA_MARKETPLACE="https://marketplace.aisa.one/"
 
 # ── Model definitions ──────────────────────────────────────────
-MODEL_IDS=("aisa/claude-opus-4-1-20250805" "aisa/gpt-5" "aisa/gemini-3-pro-preview" "aisa/deepseek-r1" "aisa/qwen3-max")
-MODEL_NAMES_EN=("Claude Opus 4.1" "GPT-5" "Gemini 3 Pro" "DeepSeek R1" "Qwen3 Max")
-MODEL_NAMES_ZH=("Claude Opus 4.1" "GPT-5" "Gemini 3 Pro" "DeepSeek R1" "Qwen3 Max")
-MODEL_EMOJIS=("🧠" "🌟" "🔵" "🔬" "🇨🇳")
-MODEL_DESCS_EN=("Best reasoning capability" "Latest OpenAI flagship, balanced" "Google latest multimodal model" "Strong reasoning chain" "Best for Chinese tasks")
-MODEL_DESCS_ZH=("推理能力最强" "OpenAI 最新旗舰，性能均衡" "Google 最新多模态模型" "推理链路强" "中文任务最优")
+MODEL_IDS=("aisa/claude-haiku-4-5-20251001" "aisa/gpt-5" "aisa/gemini-3-pro-preview" "aisa/deepseek-r1" "aisa/qwen3-max")
+MODEL_NAMES_EN=("Claude Haiku 4.5" "GPT-5" "Gemini 3 Pro" "DeepSeek R1" "Qwen3 Max")
+MODEL_NAMES_ZH=("Claude Haiku 4.5" "GPT-5" "Gemini 3 Pro" "DeepSeek R1" "Qwen3 Max")
+MODEL_EMOJIS=("⚡" "🌟" "🔵" "🔬" "🇨🇳")
+MODEL_DESCS_EN=("Fast & lightweight, recommended default" "Latest OpenAI flagship, balanced" "Google latest multimodal model" "Strong reasoning chain" "Best for Chinese tasks")
+MODEL_DESCS_ZH=("速度快、轻量级，推荐默认" "OpenAI 最新旗舰，性能均衡" "Google 最新多模态模型" "推理链路强" "中文任务最优")
 
 # ── CLI arguments ───────────────────────────────────────────────
 ARG_LANG=""
@@ -104,8 +104,8 @@ t() {
         welcome_desc)        echo "本脚本将帮助您快速配置 OpenClaw 使用 AISA 统一模型 API" ;;
         welcome_feature1)    echo "💰 统一计费，无需多个 API 订阅" ;;
         welcome_feature2)    echo "⚡ 智能路由，自动选择最优节点" ;;
-        welcome_feature3)    echo "🔄 50+ 个顶级模型一键切换" ;;
-        overview_title)      echo "📦 模型总览 — 8 大厂商，50+ 个模型" ;;
+        welcome_feature3)    echo "🔄 48 个顶级模型一键切换" ;;
+        overview_title)      echo "📦 模型总览 — 8 大厂商，56 个模型" ;;
         overview_provider)   echo "厂商" ;;
         overview_count)      echo "数量" ;;
         overview_featured)   echo "代表模型" ;;
@@ -121,7 +121,7 @@ t() {
         ask_key_title)       echo "🔑 请输入您的 AISA API Key" ;;
         ask_key_hint)        echo "格式: sk-xxxx" ;;
         ask_key_get)         echo "📝 还没有？请访问获取:" ;;
-        ask_key_free)        echo "🎁 新用户可获得 \$5 免费额度！" ;;
+        ask_key_free)        echo "🎁 新用户可获得 \$1 免费额度！" ;;
         ask_key_prompt)      echo "请粘贴您的 API Key: " ;;
         key_invalid)         echo "❌ API Key 格式无效，应以 sk- 开头" ;;
         key_accepted)        echo "✅ API Key 已接收！" ;;
@@ -137,7 +137,7 @@ t() {
         success_title)       echo "🎉🎊 恭喜！AISA 统一模型配置成功！🎊🎉" ;;
         success_done)        echo "⚙️  配置已完成，Gateway 已就绪 ✅" ;;
         success_why)         echo "🌟 为什么选择 AISA 模型路由？" ;;
-        models_title)        echo "📦 已配置 50+ 个模型（8 大厂商）" ;;
+        models_title)        echo "📦 已配置 56 个模型（8 大厂商）" ;;
         rec_title)           echo "📋 推荐模型速查" ;;
         notes_title)         echo "⚠️  重要提示" ;;
         notes_current)       echo "📌 关于当前配置：" ;;
@@ -157,21 +157,22 @@ t() {
         th_desc)             echo "说明" ;;
         # Vendor names
         vendor_openai)       echo "🟢 OpenAI 系列 (10 个)" ;;
-        vendor_claude)       echo "🟣 Anthropic Claude 系列 (11 个)" ;;
-        vendor_gemini)       echo "🔵 Google Gemini 系列 (5 个)" ;;
+        vendor_claude)       echo "🟣 Anthropic Claude 系列 (13 个)" ;;
+        vendor_gemini)       echo "🔵 Google Gemini 系列 (6 个)" ;;
         vendor_deepseek)     echo "🟠 DeepSeek 系列 (4 个)" ;;
         vendor_grok)         echo "⚫ xAI Grok 系列 (2 个)" ;;
         vendor_kimi)         echo "🟡 Moonshot Kimi 系列 (2 个)" ;;
         vendor_qwen)         echo "🔴 Alibaba Qwen 系列 (15 个)" ;;
+        vendor_seed)         echo "🌱 ByteDance Seed 系列 (4 个)" ;;
         # Recommendations
         rec_general)         echo "通用任务" ;;
-        rec_reasoning)       echo "复杂推理" ;;
+        rec_reasoning)       echo "默认 (快速)" ;;
         rec_coding)          echo "代码开发" ;;
         rec_chinese)         echo "中文任务" ;;
         rec_thinking)        echo "深度思考" ;;
         rec_fast)            echo "快速响应" ;;
         rec_general_d)       echo "🌟 最新旗舰" ;;
-        rec_reasoning_d)     echo "🧠 推理能力最强" ;;
+        rec_reasoning_d)     echo "⚡ 速度快、轻量级 ⭐ 默认" ;;
         rec_coding_d)        echo "💻 专为编程优化" ;;
         rec_chinese_d)       echo "🇨🇳 中文表现优秀" ;;
         rec_thinking_d)      echo "🔬 推理链路强" ;;
@@ -186,8 +187,8 @@ t() {
         welcome_desc)        echo "This script configures OpenClaw to use the AISA Unified Model API" ;;
         welcome_feature1)    echo "💰 Cost-effective: Unified billing, no multiple API subscriptions" ;;
         welcome_feature2)    echo "⚡ Faster response: Smart routing, auto-selects optimal nodes" ;;
-        welcome_feature3)    echo "🔄 One-click switch: 53 top models available anytime" ;;
-        overview_title)      echo "📦 Model Overview — 8 Providers, 53 Models" ;;
+        welcome_feature3)    echo "🔄 One-click switch: 48 top models available anytime" ;;
+        overview_title)      echo "📦 Model Overview — 8 Providers, 56 Models" ;;
         overview_provider)   echo "Provider" ;;
         overview_count)      echo " # " ;;
         overview_featured)   echo "Featured Models" ;;
@@ -203,7 +204,7 @@ t() {
         ask_key_title)       echo "🔑 Enter your AISA API Key" ;;
         ask_key_hint)        echo "Format: sk-xxxx" ;;
         ask_key_get)         echo "📝 Don't have one? Get it here:" ;;
-        ask_key_free)        echo "🎁 New users receive \$5 free credit!" ;;
+        ask_key_free)        echo "🎁 New users receive \$1 free credit!" ;;
         ask_key_prompt)      echo "Paste your API Key: " ;;
         key_invalid)         echo "❌ Invalid API Key format, should start with sk-" ;;
         key_accepted)        echo "✅ API Key accepted!" ;;
@@ -219,7 +220,7 @@ t() {
         success_title)       echo "🎉🎊 Congratulations! AISA Unified Model Configuration Complete! 🎊🎉" ;;
         success_done)        echo "⚙️  Configuration done, Gateway is ready ✅" ;;
         success_why)         echo "🌟 Why Choose AISA Model Router?" ;;
-        models_title)        echo "📦 53 Models Configured (8 Providers)" ;;
+        models_title)        echo "📦 56 Models Configured (8 Providers)" ;;
         rec_title)           echo "📋 Recommended Models Quick Reference" ;;
         notes_title)         echo "⚠️  Important Notes" ;;
         notes_current)       echo "📌 About Your Configuration:" ;;
@@ -237,20 +238,21 @@ t() {
         th_use)              echo "Use Case" ;;
         th_desc)             echo "Description" ;;
         vendor_openai)       echo "🟢 OpenAI Series (10)" ;;
-        vendor_claude)       echo "🟣 Anthropic Claude Series (10)" ;;
-        vendor_gemini)       echo "🔵 Google Gemini Series (5)" ;;
+        vendor_claude)       echo "🟣 Anthropic Claude Series (13)" ;;
+        vendor_gemini)       echo "🔵 Google Gemini Series (6)" ;;
         vendor_deepseek)     echo "🟠 DeepSeek Series (4)" ;;
         vendor_grok)         echo "⚫ xAI Grok Series (2)" ;;
         vendor_kimi)         echo "🟡 Moonshot Kimi Series (2)" ;;
         vendor_qwen)         echo "🔴 Alibaba Qwen Series (15)" ;;
+        vendor_seed)         echo "🌱 ByteDance Seed Series (4)" ;;
         rec_general)         echo "General tasks" ;;
-        rec_reasoning)       echo "Complex reasoning" ;;
+        rec_reasoning)       echo "Default (Fast)" ;;
         rec_coding)          echo "Coding" ;;
         rec_chinese)         echo "Chinese tasks" ;;
         rec_thinking)        echo "Deep thinking" ;;
         rec_fast)            echo "Fast response" ;;
         rec_general_d)       echo "🌟 Latest flagship" ;;
-        rec_reasoning_d)     echo "🧠 Best reasoning" ;;
+        rec_reasoning_d)     echo "⚡ Fast & lightweight ⭐ Default" ;;
         rec_coding_d)        echo "💻 Optimized for code" ;;
         rec_chinese_d)       echo "🇨🇳 Best for Chinese" ;;
         rec_thinking_d)      echo "🔬 Reasoning chain" ;;
@@ -277,7 +279,7 @@ print_separator() {
   echo -e "${DIM}$(t separator)${NC}"
 }
 
-# Print model overview table (8 providers, 53 models, 3 featured each)
+# Print model overview table (7 providers, 48 models, 3 featured each)
 print_model_overview() {
   local more="$(t overview_more)"
   echo ""
@@ -287,14 +289,15 @@ print_model_overview() {
   printf "  ${DIM}│${NC} ${BOLD}%-16s${NC} ${DIM}│${NC}${BOLD}%-5s${NC}${DIM}│${NC} ${BOLD}%-46s${NC} ${DIM}│${NC}\n" "$(t overview_provider)" "$(t overview_count)" "$(t overview_featured)"
   printf "  ${DIM}├──────────────────┼─────┼────────────────────────────────────────────────┤${NC}\n"
   printf "  ${DIM}│${NC} 🌟 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+7 ${more}${NC} ${DIM}│${NC}\n"  "OpenAI"    10 "gpt-5, gpt-5.2, gpt-4.1"
-  printf "  ${DIM}│${NC} 🧠 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+7 ${more}${NC} ${DIM}│${NC}\n"  "Anthropic" 10 "opus-4.1, sonnet-4.5, haiku-4.5"
-  printf "  ${DIM}│${NC} 🔵 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+2 ${more}${NC} ${DIM}│${NC}\n"  "Google"     5 "gemini-3-pro, 2.5-pro, 2.5-flash"
+  printf "  ${DIM}│${NC} 🧠 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+10 ${more}${NC} ${DIM}│${NC}\n" "Anthropic" 13 "opus-4.6, sonnet-4.6, haiku-4.5"
+  printf "  ${DIM}│${NC} 🔵 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+3 ${more}${NC} ${DIM}│${NC}\n"  "Google"     6 "gemini-3.1-pro, 3-pro, 2.5-pro"
   printf "  ${DIM}│${NC} 🔬 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+1 ${more}${NC} ${DIM}│${NC}\n"  "DeepSeek"   4 "deepseek-r1, v3.1, v3"
   printf "  ${DIM}│${NC} 🚀 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-46s${NC} ${DIM}│${NC}\n"                         "xAI"        2 "grok-4, grok-3"
   printf "  ${DIM}│${NC} 🌙 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-46s${NC} ${DIM}│${NC}\n"                         "Moonshot"   2 "kimi-k2.5, kimi-k2-thinking"
   printf "  ${DIM}│${NC} 🇨🇳 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-32s${NC} ${DIM}+12 ${more}${NC} ${DIM}│${NC}\n" "Alibaba"   15 "qwen3-max, qwen3-coder, vl-plus"
+  printf "  ${DIM}│${NC} 🌱 %-13s ${DIM}│${NC} ${WHITE}%2d${NC}  ${DIM}│${NC} ${CYAN}%-33s${NC} ${DIM}+1 ${more}${NC} ${DIM}│${NC}\n"  "ByteDance"  4 "seed-1-6, seed-1-8, seedream-4-5"
   printf "  ${DIM}├──────────────────┼─────┼────────────────────────────────────────────────┤${NC}\n"
-  printf "  ${DIM}│${NC} ${BOLD}%-16s${NC} ${DIM}│${NC} ${GREEN}${BOLD}%2d${NC}  ${DIM}│${NC} ${GREEN}%-46s${NC} ${DIM}│${NC}\n" "$(t overview_total)" 48 "✅ $(t overview_all)"
+  printf "  ${DIM}│${NC} ${BOLD}%-16s${NC} ${DIM}│${NC} ${GREEN}${BOLD}%2d${NC}  ${DIM}│${NC} ${GREEN}%-46s${NC} ${DIM}│${NC}\n" "$(t overview_total)" 56 "✅ $(t overview_all)"
   printf "  ${DIM}└──────────────────┴─────┴────────────────────────────────────────────────┘${NC}\n"
 }
 
@@ -444,7 +447,7 @@ echo -e "$(t writing_config)"
 
 # Preserve existing non-model config if present
 # Read existing gateway config
-if [[ -n "${BACKUP_FILE:-}" && -f "$BACKUP_FILE" ]]; then
+if [[ -f "$BACKUP_FILE" ]]; then
   GW_PORT=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('port',18789))" 2>/dev/null || echo "18789")
   GW_TOKEN=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('auth',{}).get('token',''))" 2>/dev/null || echo "")
   GW_BIND=$(python3 -c "import json; c=json.load(open('$BACKUP_FILE')); print(c.get('gateway',{}).get('bind','loopback'))" 2>/dev/null || echo "loopback")
@@ -506,11 +509,15 @@ cat > "$OPENCLAW_CONFIG" << JSONEOF
           {"id": "claude-sonnet-4-20250514", "name": "Claude Sonnet 4 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "claude-sonnet-4-20250514-thinking", "name": "Claude Sonnet 4 Thinking (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "claude-sonnet-4-5-20250929", "name": "Claude Sonnet 4.5 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-opus-4-6", "name": "Claude Opus 4.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-sonnet-4-6", "name": "Claude Sonnet 4.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-sonnet-4-6-thinking", "name": "Claude Sonnet 4.6 Thinking (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "gemini-2.5-flash", "name": "Gemini 2.5 Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-2.5-flash-lite", "name": "Gemini 2.5 Flash Lite (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-2.5-pro", "name": "Gemini 2.5 Pro (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-3-pro-image-preview", "name": "Gemini 3 Pro Image (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-3-pro-preview", "name": "Gemini 3 Pro Preview (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "gemini-3.1-pro-preview", "name": "Gemini 3.1 Pro Preview (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-r1", "name": "DeepSeek R1 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-v3", "name": "DeepSeek V3 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-v3-0324", "name": "DeepSeek V3 0324 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
@@ -533,7 +540,11 @@ cat > "$OPENCLAW_CONFIG" << JSONEOF
           {"id": "qwen3-vl-flash", "name": "Qwen3 VL Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "qwen3-vl-flash-2025-10-15", "name": "Qwen3 VL Flash 2025-10-15 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "qwen3-vl-plus", "name": "Qwen3 VL Plus (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
-          {"id": "qwen3-vl-plus-2025-12-19", "name": "Qwen3 VL Plus 2025-12-19 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192}
+          {"id": "qwen3-vl-plus-2025-12-19", "name": "Qwen3 VL Plus 2025-12-19 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-6-250915", "name": "Seed 1.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-6-flash-250715", "name": "Seed 1.6 Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-8-251228", "name": "Seed 1.8 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seedream-4-5-251128", "name": "Seedream 4.5 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192}
         ]
       }
     }
@@ -565,11 +576,15 @@ cat > "$OPENCLAW_CONFIG" << JSONEOF
         "aisa/claude-sonnet-4-20250514": {},
         "aisa/claude-sonnet-4-20250514-thinking": {},
         "aisa/claude-sonnet-4-5-20250929": {},
+        "aisa/claude-opus-4-6": {},
+        "aisa/claude-sonnet-4-6": {},
+        "aisa/claude-sonnet-4-6-thinking": {},
         "aisa/gemini-2.5-flash": {},
         "aisa/gemini-2.5-flash-lite": {},
         "aisa/gemini-2.5-pro": {},
         "aisa/gemini-3-pro-image-preview": {},
         "aisa/gemini-3-pro-preview": {},
+        "aisa/gemini-3.1-pro-preview": {},
         "aisa/deepseek-r1": {},
         "aisa/deepseek-v3": {},
         "aisa/deepseek-v3-0324": {},
@@ -592,7 +607,11 @@ cat > "$OPENCLAW_CONFIG" << JSONEOF
         "aisa/qwen3-vl-flash": {},
         "aisa/qwen3-vl-flash-2025-10-15": {},
         "aisa/qwen3-vl-plus": {},
-        "aisa/qwen3-vl-plus-2025-12-19": {}
+        "aisa/qwen3-vl-plus-2025-12-19": {},
+        "aisa/seed-1-6-250915": {},
+        "aisa/seed-1-6-flash-250715": {},
+        "aisa/seed-1-8-251228": {},
+        "aisa/seedream-4-5-251128": {}
       },
       "workspace": "${WORKSPACE}",
       "compaction": { "mode": "safeguard" },
@@ -719,16 +738,20 @@ print_vendor_table "vendor_claude" \
   "/model aisa/claude-opus-4-1-20250805-thinking|Claude Opus 4.1 Thinking|200K" \
   "/model aisa/claude-opus-4-20250514|Claude Opus 4|200K" \
   "/model aisa/claude-opus-4-20250514-thinking|Claude Opus 4 Thinking|200K" \
+  "/model aisa/claude-opus-4-6|Claude Opus 4.6 🧠|200K" \
   "/model aisa/claude-sonnet-4-20250514|Claude Sonnet 4|200K" \
   "/model aisa/claude-sonnet-4-20250514-thinking|Claude Sonnet 4 Thinking|200K" \
-  "/model aisa/claude-sonnet-4-5-20250929|Claude Sonnet 4.5|200K"
+  "/model aisa/claude-sonnet-4-5-20250929|Claude Sonnet 4.5|200K" \
+  "/model aisa/claude-sonnet-4-6|Claude Sonnet 4.6|200K" \
+  "/model aisa/claude-sonnet-4-6-thinking|Claude Sonnet 4.6 Thinking|200K"
 
 print_vendor_table "vendor_gemini" \
   "/model aisa/gemini-2.5-flash|Gemini 2.5 Flash|128K" \
   "/model aisa/gemini-2.5-flash-lite|Gemini 2.5 Flash Lite|128K" \
   "/model aisa/gemini-2.5-pro|Gemini 2.5 Pro|128K" \
   "/model aisa/gemini-3-pro-image-preview|Gemini 3 Pro Image|128K" \
-  "/model aisa/gemini-3-pro-preview|Gemini 3 Pro Preview|128K"
+  "/model aisa/gemini-3-pro-preview|Gemini 3 Pro Preview|128K" \
+  "/model aisa/gemini-3.1-pro-preview|Gemini 3.1 Pro Preview|128K"
 
 print_vendor_table "vendor_deepseek" \
   "/model aisa/deepseek-r1|DeepSeek R1 🔬|128K" \
@@ -761,6 +784,12 @@ print_vendor_table "vendor_qwen" \
   "/model aisa/qwen3-vl-plus|Qwen3 VL Plus|128K" \
   "/model aisa/qwen3-vl-plus-2025-12-19|Qwen3 VL Plus (2025-12-19)|128K"
 
+print_vendor_table "vendor_seed" \
+  "/model aisa/seed-1-6-250915|Seed 1.6|128K" \
+  "/model aisa/seed-1-6-flash-250715|Seed 1.6 Flash|128K" \
+  "/model aisa/seed-1-8-251228|Seed 1.8|128K" \
+  "/model aisa/seedream-4-5-251128|Seedream 4.5|128K"
+
 # ── Recommendations table ──────────────────────────────────────
 echo ""
 print_separator
@@ -769,7 +798,7 @@ echo -e "${BOLD}$(t rec_title)${NC}"
 echo ""
 printf "  ${DIM}%-18s %-42s %s${NC}\n" "$(t th_use)" "$(t th_cmd)" "$(t th_desc)"
 printf "  %-18s %-42s %s\n" "$(t rec_general)"   "/model aisa/gpt-5"                      "$(t rec_general_d)"
-printf "  %-18s %-42s %s\n" "$(t rec_reasoning)" "/model aisa/claude-opus-4-1-20250805"   "$(t rec_reasoning_d)"
+printf "  %-18s %-42s %s\n" "$(t rec_reasoning)" "/model aisa/claude-haiku-4-5-20251001"  "$(t rec_reasoning_d)"
 printf "  %-18s %-42s %s\n" "$(t rec_coding)"    "/model aisa/qwen3-coder-plus"           "$(t rec_coding_d)"
 printf "  %-18s %-42s %s\n" "$(t rec_chinese)"   "/model aisa/qwen3-max"                  "$(t rec_chinese_d)"
 printf "  %-18s %-42s %s\n" "$(t rec_thinking)"  "/model aisa/deepseek-r1"                "$(t rec_thinking_d)"
@@ -829,6 +858,7 @@ print_separator
 echo ""
 echo -e "  ${BOLD}${WHITE}$(t start_using)${NC}"
 echo ""
+
 exit 0
 } # end main()
 
