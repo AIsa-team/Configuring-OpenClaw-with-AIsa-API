@@ -1,12 +1,12 @@
 # Configure OpenClaw with AISA's Unified API
 
-Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw/openclaw). One API key gives you access to **50+ models** across 8 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba, ByteDance).
+Use [AISA](https://marketplace.aisa.one/) as your unified LLM backend for [OpenClaw](https://github.com/openclaw/openclaw). One API key gives you access to **56 models** across 8 providers (OpenAI, Anthropic, Google, DeepSeek, xAI, Moonshot, Alibaba, ByteDance).
 
 ## Why AISA?
 
 - **Cost-effective** - Unified billing, no need for multiple API subscriptions
 - **Faster response** - Smart routing, auto-selects optimal nodes
-- **One-click switch** - 50+ top models available anytime, no reconfiguration needed
+- **One-click switch** - 56 top models available anytime, no reconfiguration needed
 
 ## Getting Started
 
@@ -21,18 +21,18 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 Run this single command to set everything up automatically:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AIsa-team/Configuring-OpenClaw-with-AIsa-API/main/setup-aisa-llm.sh | bash
+curl -fsSL https://market.aisa.one/openclaw/setup-aisa-llm.sh | bash
 ```
 
 Then just:
-1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$5 free credit**)
+1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$1 free credit**)
 2. Press Enter through the prompts to accept defaults
 
-That's it! Your OpenClaw is now configured with AISA LLM.
+That's it! Your OpenClaw is now configured with AISA LLM. The default model is **claude-haiku-4-5-20251001** for fast response times.
 
 > **Tip:** You can also pass arguments non-interactively:
 > ```bash
-> curl -fsSL https://raw.githubusercontent.com/AIsa-team/Configuring-OpenClaw-with-AIsa-API/main/setup-aisa-llm.sh | bash -s -- --key sk-xxxx --model 1
+> curl -fsSL https://market.aisa.one/openclaw/setup-aisa-llm.sh | bash -s -- --key sk-xxxx --model 1
 > ```
 
 ### Option 2: Replace models in an existing OpenClaw bot
@@ -40,11 +40,11 @@ That's it! Your OpenClaw is now configured with AISA LLM.
 If you already have OpenClaw installed with other model providers, use the built-in guide to switch over. In your OpenClaw session, run:
 
 ```
-use https://raw.githubusercontent.com/AIsa-team/Configuring-OpenClaw-with-AIsa-API/main/aisa-llm-guide.md to change my llm
+use https://market.aisa.one/openclaw/aisa-llm-guide.md to change my llm
 ```
 
 Then just:
-1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$5 free credit**)
+1. Paste your AISA API Key when prompted (get one at https://marketplace.aisa.one/ - new users receive **$1 free credit**)
 2. Press Enter through the prompts to accept defaults
 
 OpenClaw's AI assistant will read the guide and walk you through replacing your current model provider with AISA.
@@ -77,13 +77,13 @@ use /path/to/Configuring-OpenClaw-with-AIsa-API/aisa-llm-guide.md to change my l
 | Provider | Count | Featured Models |
 |----------|-------|-----------------|
 | OpenAI | 10 | gpt-5, gpt-5.2, gpt-4.1 |
-| Anthropic | 13 | opus-4.6, sonnet-4.5, haiku-4.5 |
-| Google | 6 | gemini-3-pro, 2.5-pro, 2.5-flash |
+| Anthropic | 13 | opus-4.6, sonnet-4.6, haiku-4.5 |
+| Google | 6 | gemini-3.1-pro, 3-pro, 2.5-pro |
 | DeepSeek | 4 | deepseek-r1, v3.1, v3 |
 | xAI | 2 | grok-4, grok-3 |
 | Moonshot | 2 | kimi-k2.5, kimi-k2-thinking |
 | Alibaba | 15 | qwen3-max, qwen3-coder, vl-plus |
-| ByteDance | 4 | seedream-4-5-251128|
+| ByteDance | 4 | seed-1-6, seed-1-8, seedream-4-5 |
 
 ## Switching Models After Setup
 
