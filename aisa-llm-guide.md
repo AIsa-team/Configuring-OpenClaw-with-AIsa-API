@@ -18,19 +18,20 @@
   ⚡ Faster response: Smart routing, auto-selects optimal nodes
   🔄 One-click switch: 48 top models available anytime, no reconfiguration needed
 
-📦 Model Overview — 7 Providers, 48 Models
+📦 Model Overview — 8 Providers, 56 Models
 ┌──────────────────┬─────┬────────────────────────────────────────────────┐
 │ Provider         │  #  │ Featured Models                                │
 ├──────────────────┼─────┼────────────────────────────────────────────────┤
 │ 🌟 OpenAI       │ 10  │ gpt-5, gpt-5.2, gpt-4.1               +7 more │
-│ 🧠 Anthropic    │ 10  │ opus-4.1, sonnet-4.5, haiku-4.5        +7 more │
-│ 🔵 Google       │  5  │ gemini-3-pro, 2.5-pro, 2.5-flash       +2 more │
+│ 🧠 Anthropic    │ 13  │ opus-4.6, sonnet-4.6, haiku-4.5       +10 more │
+│ 🔵 Google       │  6  │ gemini-3.1-pro, 3-pro, 2.5-pro         +3 more │
 │ 🔬 DeepSeek     │  4  │ deepseek-r1, v3.1, v3                  +1 more │
 │ 🚀 xAI          │  2  │ grok-4, grok-3                                 │
 │ 🌙 Moonshot     │  2  │ kimi-k2.5, kimi-k2-thinking                    │
 │ 🇨🇳 Alibaba     │ 15  │ qwen3-max, qwen3-coder, vl-plus       +12 more │
+│ 🌱 ByteDance    │  4  │ seed-1-6, seed-1-8, seedream-4-5        +1 more │
 ├──────────────────┼─────┼────────────────────────────────────────────────┤
-│ Total            │ 48  │ ✅ All available via AISA unified API           │
+│ Total            │ 56  │ ✅ All available via AISA unified API           │
 └──────────────────┴─────┴────────────────────────────────────────────────┘
 
 🔑 To get started, I need your AISA API Key (format: sk-xxxx).
@@ -51,19 +52,20 @@ Please paste your API Key below:
   ⚡ 响应更快速：智能路由，自动选择最优节点
   🔄 一键切换：48 个顶级模型随时切换，无需重新配置
 
-📦 模型总览 — 7 大厂商，48 个模型
+📦 模型总览 — 8 大厂商，56 个模型
 ┌──────────────────┬─────┬────────────────────────────────────────────────┐
 │ 厂商             │ 数量 │ 代表模型                                       │
 ├──────────────────┼─────┼────────────────────────────────────────────────┤
 │ 🌟 OpenAI       │ 10  │ gpt-5, gpt-5.2, gpt-4.1              +7 更多  │
-│ 🧠 Anthropic    │ 10  │ opus-4.1, sonnet-4.5, haiku-4.5       +7 更多  │
-│ 🔵 Google       │  5  │ gemini-3-pro, 2.5-pro, 2.5-flash      +2 更多  │
+│ 🧠 Anthropic    │ 13  │ opus-4.6, sonnet-4.6, haiku-4.5      +10 更多  │
+│ 🔵 Google       │  6  │ gemini-3.1-pro, 3-pro, 2.5-pro        +3 更多  │
 │ 🔬 DeepSeek     │  4  │ deepseek-r1, v3.1, v3                 +1 更多  │
 │ 🚀 xAI          │  2  │ grok-4, grok-3                                 │
 │ 🌙 Moonshot     │  2  │ kimi-k2.5, kimi-k2-thinking                    │
 │ 🇨🇳 Alibaba     │ 15  │ qwen3-max, qwen3-coder, vl-plus      +12 更多  │
+│ 🌱 ByteDance    │  4  │ seed-1-6, seed-1-8, seedream-4-5      +1 更多  │
 ├──────────────────┼─────┼────────────────────────────────────────────────┤
-│ 合计             │ 48  │ ✅ 全部通过 AISA 统一 API 调用                  │
+│ 合计             │ 56  │ ✅ 全部通过 AISA 统一 API 调用                  │
 └──────────────────┴─────┴────────────────────────────────────────────────┘
 
 🔑 请输入您的 AISA API Key（格式：sk-xxxx）
@@ -174,11 +176,15 @@ Add the `aisa` configuration under `models.providers` (includes 48 models):
           {"id": "claude-sonnet-4-20250514", "name": "Claude Sonnet 4 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "claude-sonnet-4-20250514-thinking", "name": "Claude Sonnet 4 Thinking (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "claude-sonnet-4-5-20250929", "name": "Claude Sonnet 4.5 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-opus-4-6", "name": "Claude Opus 4.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-sonnet-4-6", "name": "Claude Sonnet 4.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
+          {"id": "claude-sonnet-4-6-thinking", "name": "Claude Sonnet 4.6 Thinking (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 200000, "maxTokens": 8192},
           {"id": "gemini-2.5-flash", "name": "Gemini 2.5 Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-2.5-flash-lite", "name": "Gemini 2.5 Flash Lite (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-2.5-pro", "name": "Gemini 2.5 Pro (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-3-pro-image-preview", "name": "Gemini 3 Pro Image (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "gemini-3-pro-preview", "name": "Gemini 3 Pro Preview (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "gemini-3.1-pro-preview", "name": "Gemini 3.1 Pro Preview (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-r1", "name": "DeepSeek R1 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-v3", "name": "DeepSeek V3 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "deepseek-v3-0324", "name": "DeepSeek V3 0324 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
@@ -201,7 +207,11 @@ Add the `aisa` configuration under `models.providers` (includes 48 models):
           {"id": "qwen3-vl-flash", "name": "Qwen3 VL Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "qwen3-vl-flash-2025-10-15", "name": "Qwen3 VL Flash 2025-10-15 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
           {"id": "qwen3-vl-plus", "name": "Qwen3 VL Plus (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
-          {"id": "qwen3-vl-plus-2025-12-19", "name": "Qwen3 VL Plus 2025-12-19 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192}
+          {"id": "qwen3-vl-plus-2025-12-19", "name": "Qwen3 VL Plus 2025-12-19 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-6-250915", "name": "Seed 1.6 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-6-flash-250715", "name": "Seed 1.6 Flash (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seed-1-8-251228", "name": "Seed 1.8 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192},
+          {"id": "seedream-4-5-251128", "name": "Seedream 4.5 (AISA)", "reasoning": false, "input": ["text"], "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0}, "contextWindow": 128000, "maxTokens": 8192}
         ]
       }
     }
@@ -218,7 +228,7 @@ Add the `aisa` configuration under `models.providers` (includes 48 models):
   "agents": {
     "defaults": {
       "model": {
-        "primary": "aisa/gpt-5"
+        "primary": "aisa/claude-haiku-4-5-20251001"
       },
       "models": {
         "anthropic/claude-opus-4-5": {"alias": "opus"},
@@ -242,11 +252,15 @@ Add the `aisa` configuration under `models.providers` (includes 48 models):
         "aisa/claude-sonnet-4-20250514": {},
         "aisa/claude-sonnet-4-20250514-thinking": {},
         "aisa/claude-sonnet-4-5-20250929": {},
+        "aisa/claude-opus-4-6": {},
+        "aisa/claude-sonnet-4-6": {},
+        "aisa/claude-sonnet-4-6-thinking": {},
         "aisa/gemini-2.5-flash": {},
         "aisa/gemini-2.5-flash-lite": {},
         "aisa/gemini-2.5-pro": {},
         "aisa/gemini-3-pro-image-preview": {},
         "aisa/gemini-3-pro-preview": {},
+        "aisa/gemini-3.1-pro-preview": {},
         "aisa/deepseek-r1": {},
         "aisa/deepseek-v3": {},
         "aisa/deepseek-v3-0324": {},
@@ -269,7 +283,11 @@ Add the `aisa` configuration under `models.providers` (includes 48 models):
         "aisa/qwen3-vl-flash": {},
         "aisa/qwen3-vl-flash-2025-10-15": {},
         "aisa/qwen3-vl-plus": {},
-        "aisa/qwen3-vl-plus-2025-12-19": {}
+        "aisa/qwen3-vl-plus-2025-12-19": {},
+        "aisa/seed-1-6-250915": {},
+        "aisa/seed-1-6-flash-250715": {},
+        "aisa/seed-1-8-251228": {},
+        "aisa/seedream-4-5-251128": {}
       }
     }
   }
@@ -323,7 +341,7 @@ openclaw tui
 │ /model aisa/gpt-4.1-mini        │ GPT-4.1 Mini           │ 64K     │
 │ /model aisa/gpt-4o              │ GPT-4o                 │ 128K    │
 │ /model aisa/gpt-4o-mini         │ GPT-4o Mini            │ 64K     │
-│ /model aisa/gpt-5               │ GPT-5 ⭐ 默认          │ 128K    │
+│ /model aisa/gpt-5               │ GPT-5                  │ 128K    │
 │ /model aisa/gpt-5-mini          │ GPT-5 Mini             │ 64K     │
 │ /model aisa/gpt-5.2             │ GPT-5.2                │ 128K    │
 │ /model aisa/gpt-5.2-2025-12-11  │ GPT-5.2 (2025-12-11)   │ 128K    │
@@ -331,32 +349,36 @@ openclaw tui
 │ /model aisa/gpt-oss-120b        │ GPT OSS 120B           │ 128K    │
 └─────────────────────────────────┴────────────────────────┴─────────┘
 
-🟣 Anthropic Claude 系列 (10 个)
-┌──────────────────────────────────────────────────┬─────────────────────────────┬─────────┐
-│ 切换命令                                          │ 模型名称                     │ 上下文   │
-├──────────────────────────────────────────────────┼─────────────────────────────┼─────────┤
-│ /model aisa/claude-3-7-sonnet-20250219           │ Claude 3.7 Sonnet           │ 200K    │
-│ /model aisa/claude-3-7-sonnet-20250219-thinking  │ Claude 3.7 Sonnet Thinking  │ 200K    │
-│ /model aisa/claude-haiku-4-5-20251001            │ Claude Haiku 4.5            │ 200K    │
-│ /model aisa/claude-opus-4-1-20250805             │ Claude Opus 4.1 🧠          │ 200K    │
-│ /model aisa/claude-opus-4-1-20250805-thinking    │ Claude Opus 4.1 Thinking    │ 200K    │
-│ /model aisa/claude-opus-4-20250514               │ Claude Opus 4               │ 200K    │
-│ /model aisa/claude-opus-4-20250514-thinking      │ Claude Opus 4 Thinking      │ 200K    │
-│ /model aisa/claude-sonnet-4-20250514             │ Claude Sonnet 4             │ 200K    │
-│ /model aisa/claude-sonnet-4-20250514-thinking    │ Claude Sonnet 4 Thinking    │ 200K    │
-│ /model aisa/claude-sonnet-4-5-20250929           │ Claude Sonnet 4.5           │ 200K    │
-└──────────────────────────────────────────────────┴─────────────────────────────┴─────────┘
+🟣 Anthropic Claude 系列 (13 个)
+┌──────────────────────────────────────────────────┬─────────────────────────────────┬─────────┐
+│ 切换命令                                          │ 模型名称                         │ 上下文   │
+├──────────────────────────────────────────────────┼─────────────────────────────────┼─────────┤
+│ /model aisa/claude-3-7-sonnet-20250219           │ Claude 3.7 Sonnet               │ 200K    │
+│ /model aisa/claude-3-7-sonnet-20250219-thinking  │ Claude 3.7 Sonnet Thinking      │ 200K    │
+│ /model aisa/claude-haiku-4-5-20251001            │ Claude Haiku 4.5 ⚡ ⭐ 默认      │ 200K    │
+│ /model aisa/claude-opus-4-1-20250805             │ Claude Opus 4.1 🧠              │ 200K    │
+│ /model aisa/claude-opus-4-1-20250805-thinking    │ Claude Opus 4.1 Thinking        │ 200K    │
+│ /model aisa/claude-opus-4-20250514               │ Claude Opus 4                   │ 200K    │
+│ /model aisa/claude-opus-4-20250514-thinking      │ Claude Opus 4 Thinking          │ 200K    │
+│ /model aisa/claude-opus-4-6                      │ Claude Opus 4.6 🧠              │ 200K    │
+│ /model aisa/claude-sonnet-4-20250514             │ Claude Sonnet 4                 │ 200K    │
+│ /model aisa/claude-sonnet-4-20250514-thinking    │ Claude Sonnet 4 Thinking        │ 200K    │
+│ /model aisa/claude-sonnet-4-5-20250929           │ Claude Sonnet 4.5               │ 200K    │
+│ /model aisa/claude-sonnet-4-6                    │ Claude Sonnet 4.6               │ 200K    │
+│ /model aisa/claude-sonnet-4-6-thinking           │ Claude Sonnet 4.6 Thinking      │ 200K    │
+└──────────────────────────────────────────────────┴─────────────────────────────────┴─────────┘
 
-🔵 Google Gemini 系列 (5 个)
-┌─────────────────────────────────────────┬─────────────────────────┬─────────┐
-│ 切换命令                                 │ 模型名称                 │ 上下文   │
-├─────────────────────────────────────────┼─────────────────────────┼─────────┤
-│ /model aisa/gemini-2.5-flash            │ Gemini 2.5 Flash        │ 128K    │
-│ /model aisa/gemini-2.5-flash-lite       │ Gemini 2.5 Flash Lite   │ 128K    │
-│ /model aisa/gemini-2.5-pro              │ Gemini 2.5 Pro          │ 128K    │
-│ /model aisa/gemini-3-pro-image-preview  │ Gemini 3 Pro Image      │ 128K    │
-│ /model aisa/gemini-3-pro-preview        │ Gemini 3 Pro Preview    │ 128K    │
-└─────────────────────────────────────────┴─────────────────────────┴─────────┘
+🔵 Google Gemini 系列 (6 个)
+┌─────────────────────────────────────────┬─────────────────────────────┬─────────┐
+│ 切换命令                                 │ 模型名称                     │ 上下文   │
+├─────────────────────────────────────────┼─────────────────────────────┼─────────┤
+│ /model aisa/gemini-2.5-flash            │ Gemini 2.5 Flash            │ 128K    │
+│ /model aisa/gemini-2.5-flash-lite       │ Gemini 2.5 Flash Lite       │ 128K    │
+│ /model aisa/gemini-2.5-pro              │ Gemini 2.5 Pro              │ 128K    │
+│ /model aisa/gemini-3-pro-image-preview  │ Gemini 3 Pro Image          │ 128K    │
+│ /model aisa/gemini-3-pro-preview        │ Gemini 3 Pro Preview        │ 128K    │
+│ /model aisa/gemini-3.1-pro-preview      │ Gemini 3.1 Pro Preview      │ 128K    │
+└─────────────────────────────────────────┴─────────────────────────────┴─────────┘
 
 🟠 DeepSeek 系列 (4 个)
 ┌──────────────────────────────┬──────────────────────┬─────────┐
@@ -405,14 +427,24 @@ openclaw tui
 │ /model aisa/qwen3-vl-plus-2025-12-19          │ Qwen3 VL Plus (2025-12-19)      │ 128K    │
 └───────────────────────────────────────────────┴─────────────────────────────────┴─────────┘
 
+🌱 ByteDance Seed 系列 (4 个)
+┌────────────────────────────────────┬──────────────────────┬─────────┐
+│ 切换命令                            │ 模型名称              │ 上下文   │
+├────────────────────────────────────┼──────────────────────┼─────────┤
+│ /model aisa/seed-1-6-250915        │ Seed 1.6             │ 128K    │
+│ /model aisa/seed-1-6-flash-250715  │ Seed 1.6 Flash       │ 128K    │
+│ /model aisa/seed-1-8-251228        │ Seed 1.8             │ 128K    │
+│ /model aisa/seedream-4-5-251128    │ Seedream 4.5         │ 128K    │
+└────────────────────────────────────┴──────────────────────┴─────────┘
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🌟 推荐模型速查
 
 | 用途         | 命令                                    | 说明              |
 |-------------|----------------------------------------|------------------|
+| 默认 (快速)  | /model aisa/claude-haiku-4-5-20251001  | 速度快、轻量级 ⭐ 默认 |
 | 通用任务     | /model aisa/gpt-5                      | 最新旗舰，性能均衡  |
-| 复杂推理     | /model aisa/claude-opus-4-1-20250805   | 推理能力最强       |
 | 代码开发     | /model aisa/qwen3-coder-plus           | 专为编程优化       |
 | 中文任务     | /model aisa/qwen3-max                  | 中文表现优秀       |
 | 深度思考     | /model aisa/deepseek-r1                | 推理链路强        |
@@ -423,12 +455,12 @@ openclaw tui
 📌 重要提示
 
 1️⃣ 立即切换当前会话模型：
-   /model aisa/gpt-5
+   /model aisa/claude-haiku-4-5-20251001
 
-   ⚠️ 语法注意：直接输入 /model aisa/gpt-5
-   不要输入 /model set aisa/gpt-5（不需要 "set"！）
+   ⚠️ 语法注意：直接输入 /model aisa/claude-haiku-4-5-20251001
+   不要输入 /model set aisa/claude-haiku-4-5-20251001（不需要 "set"！）
 
-2️⃣ 新会话自动使用默认模型 (aisa/gpt-5)
+2️⃣ 新会话自动使用默认模型 (aisa/claude-haiku-4-5-20251001)
 
 3️⃣ 切回原版 Claude：
    /model opus
@@ -473,7 +505,7 @@ openclaw tui
 │ /model aisa/gpt-4.1-mini        │ GPT-4.1 Mini           │ 64K     │
 │ /model aisa/gpt-4o              │ GPT-4o                 │ 128K    │
 │ /model aisa/gpt-4o-mini         │ GPT-4o Mini            │ 64K     │
-│ /model aisa/gpt-5               │ GPT-5 ⭐ Default       │ 128K    │
+│ /model aisa/gpt-5               │ GPT-5                  │ 128K    │
 │ /model aisa/gpt-5-mini          │ GPT-5 Mini             │ 64K     │
 │ /model aisa/gpt-5.2             │ GPT-5.2                │ 128K    │
 │ /model aisa/gpt-5.2-2025-12-11  │ GPT-5.2 (2025-12-11)   │ 128K    │
@@ -481,32 +513,36 @@ openclaw tui
 │ /model aisa/gpt-oss-120b        │ GPT OSS 120B           │ 128K    │
 └─────────────────────────────────┴────────────────────────┴─────────┘
 
-🟣 Anthropic Claude Series (10)
-┌──────────────────────────────────────────────────┬─────────────────────────────┬─────────┐
-│ Switch Command                                    │ Model Name                  │ Context │
-├──────────────────────────────────────────────────┼─────────────────────────────┼─────────┤
-│ /model aisa/claude-3-7-sonnet-20250219           │ Claude 3.7 Sonnet           │ 200K    │
-│ /model aisa/claude-3-7-sonnet-20250219-thinking  │ Claude 3.7 Sonnet Thinking  │ 200K    │
-│ /model aisa/claude-haiku-4-5-20251001            │ Claude Haiku 4.5            │ 200K    │
-│ /model aisa/claude-opus-4-1-20250805             │ Claude Opus 4.1 🧠          │ 200K    │
-│ /model aisa/claude-opus-4-1-20250805-thinking    │ Claude Opus 4.1 Thinking    │ 200K    │
-│ /model aisa/claude-opus-4-20250514               │ Claude Opus 4               │ 200K    │
-│ /model aisa/claude-opus-4-20250514-thinking      │ Claude Opus 4 Thinking      │ 200K    │
-│ /model aisa/claude-sonnet-4-20250514             │ Claude Sonnet 4             │ 200K    │
-│ /model aisa/claude-sonnet-4-20250514-thinking    │ Claude Sonnet 4 Thinking    │ 200K    │
-│ /model aisa/claude-sonnet-4-5-20250929           │ Claude Sonnet 4.5           │ 200K    │
-└──────────────────────────────────────────────────┴─────────────────────────────┴─────────┘
+🟣 Anthropic Claude Series (13)
+┌──────────────────────────────────────────────────┬──────────────────────────────────┬─────────┐
+│ Switch Command                                    │ Model Name                       │ Context │
+├──────────────────────────────────────────────────┼──────────────────────────────────┼─────────┤
+│ /model aisa/claude-3-7-sonnet-20250219           │ Claude 3.7 Sonnet                │ 200K    │
+│ /model aisa/claude-3-7-sonnet-20250219-thinking  │ Claude 3.7 Sonnet Thinking       │ 200K    │
+│ /model aisa/claude-haiku-4-5-20251001            │ Claude Haiku 4.5 ⚡ ⭐ Default   │ 200K    │
+│ /model aisa/claude-opus-4-1-20250805             │ Claude Opus 4.1 🧠               │ 200K    │
+│ /model aisa/claude-opus-4-1-20250805-thinking    │ Claude Opus 4.1 Thinking         │ 200K    │
+│ /model aisa/claude-opus-4-20250514               │ Claude Opus 4                    │ 200K    │
+│ /model aisa/claude-opus-4-20250514-thinking      │ Claude Opus 4 Thinking           │ 200K    │
+│ /model aisa/claude-opus-4-6                      │ Claude Opus 4.6 🧠               │ 200K    │
+│ /model aisa/claude-sonnet-4-20250514             │ Claude Sonnet 4                  │ 200K    │
+│ /model aisa/claude-sonnet-4-20250514-thinking    │ Claude Sonnet 4 Thinking         │ 200K    │
+│ /model aisa/claude-sonnet-4-5-20250929           │ Claude Sonnet 4.5                │ 200K    │
+│ /model aisa/claude-sonnet-4-6                    │ Claude Sonnet 4.6                │ 200K    │
+│ /model aisa/claude-sonnet-4-6-thinking           │ Claude Sonnet 4.6 Thinking       │ 200K    │
+└──────────────────────────────────────────────────┴──────────────────────────────────┴─────────┘
 
-🔵 Google Gemini Series (5)
-┌─────────────────────────────────────────┬─────────────────────────┬─────────┐
-│ Switch Command                           │ Model Name              │ Context │
-├─────────────────────────────────────────┼─────────────────────────┼─────────┤
-│ /model aisa/gemini-2.5-flash            │ Gemini 2.5 Flash        │ 128K    │
-│ /model aisa/gemini-2.5-flash-lite       │ Gemini 2.5 Flash Lite   │ 128K    │
-│ /model aisa/gemini-2.5-pro              │ Gemini 2.5 Pro          │ 128K    │
-│ /model aisa/gemini-3-pro-image-preview  │ Gemini 3 Pro Image      │ 128K    │
-│ /model aisa/gemini-3-pro-preview        │ Gemini 3 Pro Preview    │ 128K    │
-└─────────────────────────────────────────┴─────────────────────────┴─────────┘
+🔵 Google Gemini Series (6)
+┌─────────────────────────────────────────┬─────────────────────────────┬─────────┐
+│ Switch Command                           │ Model Name                  │ Context │
+├─────────────────────────────────────────┼─────────────────────────────┼─────────┤
+│ /model aisa/gemini-2.5-flash            │ Gemini 2.5 Flash            │ 128K    │
+│ /model aisa/gemini-2.5-flash-lite       │ Gemini 2.5 Flash Lite       │ 128K    │
+│ /model aisa/gemini-2.5-pro              │ Gemini 2.5 Pro              │ 128K    │
+│ /model aisa/gemini-3-pro-image-preview  │ Gemini 3 Pro Image          │ 128K    │
+│ /model aisa/gemini-3-pro-preview        │ Gemini 3 Pro Preview        │ 128K    │
+│ /model aisa/gemini-3.1-pro-preview      │ Gemini 3.1 Pro Preview      │ 128K    │
+└─────────────────────────────────────────┴─────────────────────────────┴─────────┘
 
 🟠 DeepSeek Series (4)
 ┌──────────────────────────────┬──────────────────────┬─────────┐
@@ -555,14 +591,24 @@ openclaw tui
 │ /model aisa/qwen3-vl-plus-2025-12-19          │ Qwen3 VL Plus (2025-12-19)      │ 128K    │
 └───────────────────────────────────────────────┴─────────────────────────────────┴─────────┘
 
+🌱 ByteDance Seed Series (4)
+┌────────────────────────────────────┬──────────────────────┬─────────┐
+│ Switch Command                      │ Model Name           │ Context │
+├────────────────────────────────────┼──────────────────────┼─────────┤
+│ /model aisa/seed-1-6-250915        │ Seed 1.6             │ 128K    │
+│ /model aisa/seed-1-6-flash-250715  │ Seed 1.6 Flash       │ 128K    │
+│ /model aisa/seed-1-8-251228        │ Seed 1.8             │ 128K    │
+│ /model aisa/seedream-4-5-251128    │ Seedream 4.5         │ 128K    │
+└────────────────────────────────────┴──────────────────────┴─────────┘
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🌟 Recommended Models Quick Reference
 
 | Use Case        | Command                                  | Description            |
 |-----------------|------------------------------------------|------------------------|
+| Default (Fast)    | /model aisa/claude-haiku-4-5-20251001  | Fast & lightweight ⭐ Default |
 | General tasks   | /model aisa/gpt-5                        | Latest flagship        |
-| Complex reasoning | /model aisa/claude-opus-4-1-20250805   | Best reasoning         |
 | Coding          | /model aisa/qwen3-coder-plus             | Optimized for coding   |
 | Chinese tasks   | /model aisa/qwen3-max                    | Best for Chinese       |
 | Deep thinking   | /model aisa/deepseek-r1                  | Strong reasoning chain |
@@ -573,12 +619,12 @@ openclaw tui
 📌 Important Notes
 
 1️⃣ Switch current session model immediately:
-   /model aisa/gpt-5
+   /model aisa/claude-haiku-4-5-20251001
 
-   ⚠️ Syntax: Type /model aisa/gpt-5 directly.
-   Do NOT type /model set aisa/gpt-5 (no "set" needed!)
+   ⚠️ Syntax: Type /model aisa/claude-haiku-4-5-20251001 directly.
+   Do NOT type /model set aisa/claude-haiku-4-5-20251001 (no "set" needed!)
 
-2️⃣ New sessions will automatically use default model (aisa/gpt-5)
+2️⃣ New sessions will automatically use default model (aisa/claude-haiku-4-5-20251001)
 
 3️⃣ Switch back to original Claude:
    /model opus
@@ -599,7 +645,7 @@ openclaw tui
 
 ---
 
-## Available Models (48)
+## Available Models (56)
 
 ### OpenAI Series (10)
 
@@ -609,29 +655,32 @@ openclaw tui
 | `aisa/gpt-4.1-mini` | GPT-4.1 Mini | 64K | Lightweight & fast |
 | `aisa/gpt-4o` | GPT-4o | 128K | Multimodal |
 | `aisa/gpt-4o-mini` | GPT-4o Mini | 64K | Lightweight multimodal |
-| `aisa/gpt-5` | GPT-5 ⭐ | 128K | Latest flagship |
+| `aisa/gpt-5` | GPT-5 | 128K | Latest flagship |
 | `aisa/gpt-5-mini` | GPT-5 Mini | 64K | Lightweight version |
 | `aisa/gpt-5.2` | GPT-5.2 | 128K | Enhanced version |
 | `aisa/gpt-5.2-2025-12-11` | GPT-5.2 Pinned | 128K | Stable version |
 | `aisa/gpt-5.2-chat-latest` | GPT-5.2 Chat Latest | 128K | Chat optimized |
 | `aisa/gpt-oss-120b` | GPT OSS 120B | 128K | Open-source large model |
 
-### Anthropic Claude Series (10)
+### Anthropic Claude Series (13)
 
 | OpenClaw Reference | Model Name | Context | Features |
 |--------------------|------------|---------|----------|
 | `aisa/claude-3-7-sonnet-20250219` | Claude 3.7 Sonnet | 200K | Balanced |
 | `aisa/claude-3-7-sonnet-20250219-thinking` | Claude 3.7 Sonnet Thinking | 200K | Enhanced thinking |
-| `aisa/claude-haiku-4-5-20251001` | Claude Haiku 4.5 | 200K | Fast response |
+| `aisa/claude-haiku-4-5-20251001` | Claude Haiku 4.5 ⚡ ⭐ | 200K | Fast response, Default |
 | `aisa/claude-opus-4-1-20250805` | Claude Opus 4.1 🧠 | 200K | Best reasoning |
 | `aisa/claude-opus-4-1-20250805-thinking` | Claude Opus 4.1 Thinking | 200K | Deep thinking |
 | `aisa/claude-opus-4-20250514` | Claude Opus 4 | 200K | Strong reasoning |
 | `aisa/claude-opus-4-20250514-thinking` | Claude Opus 4 Thinking | 200K | Thinking mode |
+| `aisa/claude-opus-4-6` | Claude Opus 4.6 🧠 | 200K | Latest Opus |
 | `aisa/claude-sonnet-4-20250514` | Claude Sonnet 4 | 200K | Balanced |
 | `aisa/claude-sonnet-4-20250514-thinking` | Claude Sonnet 4 Thinking | 200K | Enhanced thinking |
 | `aisa/claude-sonnet-4-5-20250929` | Claude Sonnet 4.5 | 200K | Latest version |
+| `aisa/claude-sonnet-4-6` | Claude Sonnet 4.6 | 200K | Latest Sonnet |
+| `aisa/claude-sonnet-4-6-thinking` | Claude Sonnet 4.6 Thinking | 200K | Thinking mode |
 
-### Google Gemini Series (5)
+### Google Gemini Series (6)
 
 | OpenClaw Reference | Model Name | Context | Features |
 |--------------------|------------|---------|----------|
@@ -640,6 +689,7 @@ openclaw tui
 | `aisa/gemini-2.5-pro` | Gemini 2.5 Pro | 128K | Professional |
 | `aisa/gemini-3-pro-image-preview` | Gemini 3 Pro Image | 128K | Image processing |
 | `aisa/gemini-3-pro-preview` | Gemini 3 Pro Preview | 128K | Preview version |
+| `aisa/gemini-3.1-pro-preview` | Gemini 3.1 Pro Preview | 128K | Latest version |
 
 ### DeepSeek Series (4)
 
@@ -684,14 +734,23 @@ openclaw tui
 | `aisa/qwen3-vl-plus` | Qwen3 VL Plus | 128K | Vision enhanced |
 | `aisa/qwen3-vl-plus-2025-12-19` | Qwen3 VL Plus Pinned | 128K | Stable version |
 
+### ByteDance Seed Series (4)
+
+| OpenClaw Reference | Model Name | Context | Features |
+|--------------------|------------|---------|----------|
+| `aisa/seed-1-6-250915` | Seed 1.6 | 128K | Flagship model |
+| `aisa/seed-1-6-flash-250715` | Seed 1.6 Flash | 128K | Fast response |
+| `aisa/seed-1-8-251228` | Seed 1.8 | 128K | Latest version |
+| `aisa/seedream-4-5-251128` | Seedream 4.5 | 128K | Creative tasks |
+
 ---
 
 ## Recommended Models
 
 | Use Case | Recommended Model | Description |
 |----------|-------------------|-------------|
+| Default (Fast)    | `aisa/claude-haiku-4-5-20251001` | Fast & lightweight, Default ⭐ |
 | General tasks | `aisa/gpt-5` | Latest flagship, balanced performance |
-| Complex reasoning | `aisa/claude-opus-4-1-20250805` | Best reasoning capability |
 | Coding | `aisa/qwen3-coder-plus` | Optimized for programming |
 | Long text processing | `aisa/claude-sonnet-4-20250514` | 200K context window |
 | Chinese tasks | `aisa/qwen3-max` | Excellent Chinese performance |
@@ -706,7 +765,7 @@ openclaw tui
 
 ```bash
 # Switch the current session model (takes effect immediately)
-/model aisa/gpt-5
+/model aisa/claude-haiku-4-5-20251001
 /model aisa/claude-sonnet-4-20250514
 /model aisa/qwen3-max
 /model aisa/deepseek-v3
@@ -722,7 +781,7 @@ openclaw tui
 openclaw agent "your question"
 
 # Specify a model
-openclaw agent --model aisa/gpt-5 "your question"
+openclaw agent --model aisa/claude-haiku-4-5-20251001 "your question"
 ```
 
 ---
@@ -792,7 +851,7 @@ openclaw doctor --non-interactive
 
 | Action | Command |
 |--------|---------|
-| Switch current session model | `/model aisa/gpt-5` |
+| Switch current session model | `/model aisa/claude-haiku-4-5-20251001` |
 | Check current status | `/status` |
 | Start new session (uses default model) | Exit and relaunch `openclaw tui` |
 | List available models | `openclaw models list` |
@@ -809,4 +868,4 @@ openclaw doctor --non-interactive
 
 ---
 
-*Last updated: 2026-02-09 | Model count: 48*
+*Last updated: 2026-02-20 | Model count: 56*
