@@ -72,13 +72,13 @@ Or point OpenClaw to the local guide:
 use /path/to/Configuring-OpenClaw-with-AIsa-API/aisa-llm-guide.md to change my llm
 ```
 
-## Available Models (53 total)
+## Available Models (56 total)
 
 | Provider | Count | Featured Models |
 |----------|-------|-----------------|
 | OpenAI | 10 | gpt-5, gpt-5.2, gpt-4.1 |
-| Anthropic | 11 | opus-4.6, sonnet-4.5, haiku-4.5 |
-| Google | 5 | gemini-3-pro, 2.5-pro, 2.5-flash |
+| Anthropic | 13 | opus-4.6, sonnet-4.5, haiku-4.5 |
+| Google | 6 | gemini-3-pro, 2.5-pro, 2.5-flash |
 | DeepSeek | 4 | deepseek-r1, v3.1, v3 |
 | xAI | 2 | grok-4, grok-3 |
 | Moonshot | 2 | kimi-k2.5, kimi-k2-thinking |
