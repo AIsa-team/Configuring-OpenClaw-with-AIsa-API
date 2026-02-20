@@ -121,7 +121,7 @@ t() {
         ask_key_title)       echo "🔑 请输入您的 AISA API Key" ;;
         ask_key_hint)        echo "格式: sk-xxxx" ;;
         ask_key_get)         echo "📝 还没有？请访问获取:" ;;
-        ask_key_free)        echo "🎁 新用户可获得 \$1 免费额度！" ;;
+        ask_key_free)        echo "🎁 新用户可获得 \$5 免费额度！" ;;
         ask_key_prompt)      echo "请粘贴您的 API Key: " ;;
         key_invalid)         echo "❌ API Key 格式无效，应以 sk- 开头" ;;
         key_accepted)        echo "✅ API Key 已接收！" ;;
@@ -204,7 +204,7 @@ t() {
         ask_key_title)       echo "🔑 Enter your AISA API Key" ;;
         ask_key_hint)        echo "Format: sk-xxxx" ;;
         ask_key_get)         echo "📝 Don't have one? Get it here:" ;;
-        ask_key_free)        echo "🎁 New users receive \$1 free credit!" ;;
+        ask_key_free)        echo "🎁 New users receive \$5 free credit!" ;;
         ask_key_prompt)      echo "Paste your API Key: " ;;
         key_invalid)         echo "❌ Invalid API Key format, should start with sk-" ;;
         key_accepted)        echo "✅ API Key accepted!" ;;

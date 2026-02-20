@@ -37,7 +37,7 @@
 🔑 To get started, I need your AISA API Key (format: sk-xxxx).
 
 📝 Don't have one yet? Get it here: https://marketplace.aisa.one/
-   🎁 New users receive $1 free credit!
+   🎁 New users receive $5 free credit!
 
 Please paste your API Key below:
 ```
@@ -71,7 +71,7 @@ Please paste your API Key below:
 🔑 请输入您的 AISA API Key（格式：sk-xxxx）
 
 📝 还没有？请访问获取：https://marketplace.aisa.one/
-   🎁 新用户可获得 $1 免费额度！
+   🎁 新用户可获得 $5 免费额度！
 
 请粘贴您的 API Key：
 ```
@@ -125,7 +125,7 @@ python3 -m webbrowser "https://marketplace.aisa.one/"
 1. Open https://marketplace.aisa.one/
 2. Register / Log in to your AISA account
 3. Get your API Key from the console (format: `sk-xxxx`)
-4. New users receive $1 free credit
+4. New users receive $5 free credit
 
 ### Step 2: Configure OpenClaw
 
